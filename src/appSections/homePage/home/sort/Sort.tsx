@@ -1,3 +1,4 @@
+"use client";
 import { useFileSort } from "@/stores/SortStores";
 import React from "react";
 
