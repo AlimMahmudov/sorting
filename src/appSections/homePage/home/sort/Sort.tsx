@@ -34,6 +34,9 @@ const Sort = () => {
     <div id={scss.Sort}>
       <div className="container">
         <div className={scss.sort}>
+          <div className={scss.text}>
+            <h1>Сортировка книг</h1>
+          </div>
           <div>
             <button
               style={buttonStyle(selectType === "stories")}
