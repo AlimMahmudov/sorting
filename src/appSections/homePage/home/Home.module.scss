@@ -1,0 +1,14 @@
+#Home {
+  padding: 30px;
+  .home {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    .text {
+      background: #0069f3;
+      padding: 5px;
+      border-radius: 5px;
+      border: solid 2px #fff;
+    }
+  }
+}
