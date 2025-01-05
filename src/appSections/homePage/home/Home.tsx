@@ -1,6 +1,7 @@
 "use client";
 import { useFileSort } from "@/stores/SortStores";
 import { useData } from "./data/Data";
+import scss from "./Home.module.scss";
 
 const Home = () => {
   const { selectType, selectCategory } = useFileSort(); // Destructure selectedType and selectedCategory
@@ -15,16 +16,20 @@ const Home = () => {
   });
 
   return (
-    <div>
-      {filteredData.length === 0 ? (
-        <p>No products found</p> // Display a message if no products match the filters
-      ) : (
-        filteredData.map((el, index) => (
-          <div className="card" key={index}>
-            <h1>{el.title}</h1>
-          </div>
-        ))
-      )}
+    <div id={scss.Home}>
+      <div className="container">
+        <div className={scss.home}>
+          {filteredData.length === 0 ? (
+            <p>No products found</p> // Display a message if no products match the filters
+          ) : (
+            filteredData.map((el, index) => (
+              <div className={scss.text} key={index}>
+                <h1>{el.title}</h1>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
   );
 };
