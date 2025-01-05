@@ -1,6 +1,7 @@
 "use client";
 import { useFileSort } from "@/stores/SortStores";
 import React from "react";
+import scss from "./Sort.module.scss";
 
 const Sort = () => {
   const {
@@ -30,40 +31,46 @@ const Sort = () => {
   });
 
   return (
-    <div>
-      <button
-        style={buttonStyle(selectType === "stories")}
-        onClick={() => TypeClick("stories")}
-      >
-        stories
-      </button>
-      <button
-        style={buttonStyle(selectType === "classic")}
-        onClick={() => TypeClick("classic")}
-      >
-        classic
-      </button>
-      <button
-        style={buttonStyle(selectType === "fantasy")}
-        onClick={() => TypeClick("fantasy")}
-      >
-        fantasy
-      </button>
-      <button
-        style={buttonStyle(selectCategory === "domestic")}
-        onClick={() => CategoryClick("domestic")}
-      >
-        Отечественные
-      </button>
-      <button
-        style={buttonStyle(selectCategory === "foreign")}
-        onClick={() => CategoryClick("foreign")}
-      >
-        Зарубежные
-      </button>
-      <button onClick={resetFile} style={buttonStyle(false)}>
-        Все
-      </button>
+    <div id={scss.Sort}>
+      <div className="container">
+        <div className={scss.sort}>
+          <div>
+            <button
+              style={buttonStyle(selectType === "stories")}
+              onClick={() => TypeClick("stories")}
+            >
+              stories
+            </button>
+            <button
+              style={buttonStyle(selectType === "classic")}
+              onClick={() => TypeClick("classic")}
+            >
+              classic
+            </button>
+            <button
+              style={buttonStyle(selectType === "fantasy")}
+              onClick={() => TypeClick("fantasy")}
+            >
+              fantasy
+            </button>
+            <button
+              style={buttonStyle(selectCategory === "domestic")}
+              onClick={() => CategoryClick("domestic")}
+            >
+              Отечественные
+            </button>
+            <button
+              style={buttonStyle(selectCategory === "foreign")}
+              onClick={() => CategoryClick("foreign")}
+            >
+              Зарубежные
+            </button>
+            <button onClick={resetFile} style={buttonStyle(false)}>
+              Все
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
