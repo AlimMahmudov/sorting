@@ -2,6 +2,7 @@
 import { useFileSort } from "@/stores/SortStores";
 import { useData } from "./data/Data";
 import scss from "./Home.module.scss";
+import Image from "next/image";
 
 const Home = () => {
   const { selectType, selectCategory } = useFileSort(); // Destructure selectedType and selectedCategory
@@ -24,6 +25,7 @@ const Home = () => {
           ) : (
             filteredData.map((el, index) => (
               <div className={scss.text} key={index}>
+                <img src={el.image} alt={el.title} />
                 <h1>{el.title}</h1>
               </div>
             ))
