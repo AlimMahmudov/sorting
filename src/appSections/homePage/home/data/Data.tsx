@@ -26,7 +26,7 @@ export const useData = () => {
     {
       title: "Шерлок Холмс",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71UsBSWKGdHp-6BOHlyzLAinQOqjktOrLSg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsqpZLS74mww2_ZidbW64RDeQ1GGQsCS0QFw&s",
       type: "classic",
       category: "foreign",
     },
