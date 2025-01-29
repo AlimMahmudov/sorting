@@ -36,6 +36,13 @@ export const useData = () => {
       type: "fantasy",
       category: "foreign",
     },
+    {
+      title: "Властелин колец",
+      image:
+        "https://apl-api.apollo.ee/img/600/744/resize/catalog/product//9/7/9785171103781_2.jpg",
+      type: "fantasy",
+      category: "foreign",
+    },
   ];
   return { data };
 };
